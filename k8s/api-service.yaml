@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: coordinates-api-svc
+  labels:
+    app: coordinates_api
+
+spec:
+  type: NodePort
+  ports:
+  - port: 8000 
+    targetPort: 8000
+    nodePort: 30080
+
+
